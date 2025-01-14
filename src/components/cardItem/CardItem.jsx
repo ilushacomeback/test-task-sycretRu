@@ -5,11 +5,11 @@ export const CardItem = ({ name, onClick, discount, summa }) => {
   const normalizePrice = summa.split('.')[0];
   const normalizeDiscount = discount.split('.')[0] + '%';
   return (
-    <li className={styled.card} onClick={onClick}>
+    <li className={styled.card}>
       <h1>{name.toUpperCase()}</h1>
       <span>Скидка - {normalizeDiscount}</span>
       <span>Цена - {normalizePrice} руб</span>
-      <button>Купить</button>
+      <button onClick={onClick}>Купить</button>
     </li>
   );
 };
