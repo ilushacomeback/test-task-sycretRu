@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router';
 import { staticRoutes } from '../../routes/routes';
 import InputMask from 'react-input-mask';
@@ -11,11 +11,13 @@ export const Form = () => {
   const [errors, setErrors] = useState(null);
   const { handleSetData, resetData, data } = useContext(storeContext);
   const navigate = useNavigate();
+  const nameInput = useRef(null)
 
   useEffect(() => {
     if (!data.id) {
       navigate(staticRoutes.base);
     }
+    nameInput.current.focus()
   }, [data.id]);
 
   const handleExit = () => {
@@ -51,6 +53,7 @@ export const Form = () => {
           id="name"
           placeholder="Ваше имя..."
           aria-invalid={errors?.name}
+          ref={nameInput}
         />
       </div>
       <div>
