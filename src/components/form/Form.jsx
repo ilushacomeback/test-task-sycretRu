@@ -46,7 +46,7 @@ export const Form = () => {
   return (
     <form action="" onSubmit={handleSubmit} className={styled.form} noValidate>
       <div>
-        {errors?.name && <div className={styled.error}>{errors.name}</div>}
+        {errors?.clientName && <div className={styled.error}>{errors.clientName}</div>}
         <label htmlFor="name">Имя</label>
         <input
           type="text"
