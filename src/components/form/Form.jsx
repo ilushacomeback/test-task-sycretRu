@@ -64,7 +64,7 @@ export const Form = () => {
           value={statePhone}
           onChange={(e) => setStatePhone(e.target.value)}
         >
-          {() => <input type="text" id="phone" aria-invalid={errors?.phone} />}
+          {() => <input type="text" id="phone" aria-invalid={errors?.phone} inputMode='numeric' />}
         </InputMask>
       </div>
       <div>
