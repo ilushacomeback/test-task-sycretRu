@@ -19,7 +19,7 @@ const plugins = [
   new MiniCssExtractPlugin({
     filename: '[name].[contenthash].css',
   }),
-  new Dotenv(),
+  new Dotenv({ systemvars: true }),
 ];
 
 if (process.env.SERVE) {
