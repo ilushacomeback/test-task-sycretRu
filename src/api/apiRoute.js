@@ -1,0 +1,1 @@
+export const apiRoute = 'https://sycret.ru/service/api/api';

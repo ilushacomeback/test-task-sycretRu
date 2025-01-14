@@ -1,0 +1,54 @@
+h1 {
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgb(53 53 111);
+  border-radius: 10px;
+  padding: 15px 10px;
+  width: 250px;
+  transition: all 0.5s ease-in;
+}
+
+.card:hover {
+  background-color: rgba(105, 105, 105, 0.5);
+}
+
+.card:hover > button {
+  position: relative;
+  background-color: rgba(236, 17, 218, 1);
+  animation: animationBtn 0.5s infinite ease-in;
+}
+
+.card > button {
+    background-color: rgba(236, 17, 218, 0.7);
+    border-radius: 10px;
+    width: 100%;
+}
+
+@keyframes animationBtn {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(-1px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  75% {
+    transform: translateX(1px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}

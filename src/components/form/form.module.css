@@ -1,0 +1,83 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.form > div {
+  margin-top: 30px;
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  position: absolute;
+  top: -31px;
+  color: red;
+  /* font-size: 0.8rem; */
+}
+
+[aria-invalid] {
+  border: 1px solid red;
+}
+
+input {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  color: black;
+}
+
+label {
+  display: none;
+}
+
+.form:hover > .buttons > .buyBtn {
+  position: relative;
+  background-color: rgba(236, 17, 218, 1);
+  animation: animationBtn 0.5s infinite ease-in;
+}
+
+.buyBtn {
+  background-color: rgba(236, 17, 218, 0.7);
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.exitBtn {
+  transition: all 0.5s ease-in;
+}
+
+.exitBtn:hover {
+  color: red;
+}
+
+@keyframes animationBtn {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(-1px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+
+  75% {
+    transform: translateX(1px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
