@@ -2,7 +2,7 @@ import { apiRoute } from './apiRoute';
 
 export const saveDataInServer = async (data) => {
   const defaultBody = {
-    ApiKey: process.env.API_KEY,
+    ApiKey: process.env.REACT_APP_API_KEY,
     MethodName: 'OSSale',
     paymentTypeId: 2,
     useDelivery: 0,

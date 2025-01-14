@@ -6,17 +6,6 @@ import { staticRoutes } from '@/routes/routes';
 import { useNavigate } from 'react-router';
 import storeContext from '@/context/StoreContext';
 
-const items = [
-  { price: 100, id: '1', name: 'one' },
-  { price: 200, id: '2', name: 'two' },
-  { price: 300, id: '3', name: 'three' },
-  { price: 400, id: '4', name: 'four' },
-  { price: 500, id: '5', name: 'five' },
-  { price: 600, id: '6', name: 'six' },
-  { price: 700, id: '7', name: 'seven' },
-  { price: 800, id: '8', name: 'eight' },
-];
-
 export const Cards = () => {
   const [dataFromServer, setDataFromServer] = useState([]);
   const { handleSetData } = useContext(storeContext);
@@ -34,7 +23,7 @@ export const Cards = () => {
         const data = await response.json();
         setDataFromServer(data.data.reverse());
       } catch (e) {
-        setDataFromServer(items);
+        console.log(e)
       }
     };
     getData();
